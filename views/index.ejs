@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie ticket booking</title>
+
+<style>
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;}
+
+a{
+    text-decoration:none;}
+
+
+.container{
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;}
+
+p{
+    line-height:26px;
+    font-size:16px;}
+
+.plr{
+    padding-left:60px !important;
+    padding-right:60px !important;}
+
+.main-cont{
+    width:100%;
+    float:left;
+    background:#000;}
+
+.navbar-info{
+    width:100%;
+    float:left;
+    padding:14px 0;
+    position:fixed;
+    z-index:1;
+    transition:0.8s;}
+
+.logo img{
+    max-width:250px;}
+
+.navbar-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+.navbar-inner ul{
+    list-style-type: none;}
+
+.navbar-inner ul li a{
+    background: #fff;
+    padding:10px 20px;
+    display: inline-block;
+    border-radius:5px;
+    color:#000;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.navbar-info.active{
+    background:#000;}
+
+.banner-info{
+    width:100%;
+    height:100vh;
+    float:left;
+    position:relative;
+    background:url("images/banner.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;}
+
+
+.banner-info::before{
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:linear-gradient(to left top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 68%);
+    position:absolute;}
+
+
+.banner-cont{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:400px;
+    color:#fff;}
+
+.banner-cont img{
+    max-width:250px;}
+
+.banner-cont p{
+    margin:30px 0;}
+
+.banner-cont ul li{
+    display: inline-block;
+    padding:0 16px 0 0;
+    position:relative;}
+
+.banner-cont ul li:after{
+    content:'';
+    width:2px;
+    height:100%;
+    background:#737373;
+    position:absolute;
+    right:5px;}
+
+.banner-cont ul li:last-of-type::after{
+    width:0;}
+
+
+
+.now-showing{
+    width:100%;
+    float:left;
+    padding:30px 0;}
+
+.movies-list{
+    display: flex;
+    flex-wrap: nowrap;
+    margin:10px 0 0 0;}
+
+.movie-item{
+    height:186px;
+    position:relative;
+    width:25%;
+    margin:0 15px 0 0;
+    transition:all 0.8s;
+    overflow: hidden;
+    cursor:pointer;}
+
+.movie-item:last-of-type{
+    margin:0 0 0 0;}
+
+.movie-item img{
+    width:100%;
+    max-width:139px;
+    height:100%;
+    object-fit: cover;
+    border-radius:10px;}
+
+
+ul{
+    display: flex;
+}
+
+ul li{
+    margin: 0 10px 0 0;
+}
+
+.movie-item:hover{
+    transform: scale(1.1);}
+
+
+
+
+
+</style>
+
+</head> 
+<body>
+
+
+            <div class="main-cont">
+
+                <!--Start-navbar-info-->
+
+                <div class="navbar-info plr">
+                        <div class="navbar-inner">
+                            <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+                            <ul>
+
+                                <li><a href="book">Book Now</a></li>
+
+                        </ul>
+                </div>
+                </div>
+
+                <!--End-navbar-info-->
+            
+
+                <!--Start-banner-info-->
+
+                <div class="banner-info plr">
+
+
+                    <div class="banner-cont">
+                            <img src="images/movie-logo.webp" alt="movie-logo">
+                            <p>T'Challa, heir to the hidden kingdom of Wakanda, must lead his people into a new future and confront a challenger from his country's past.</p>
+                            <ul>
+                                <li>Superhero</li>
+                                <li>Action</li>
+                                <li>Fantasy</li>
+                                <li>Technology</li>
+
+                            </ul>
+                    </div>
+                </div>
+
+            <!--End-banner-info-->
+
+
+            <!--Start-now-showing-->
+
+                <div class="now-showing plr">
+                    <div class="now-showing-features">
+                        <img src="images/nowshow.png" alt="nowshowing" class="head-img">
+
+
+                        <div class="movies-list">
+                            <div class="movie-item">
+                                <img src="images/kaduva.png" alt="kaduva">
+                            </div>
+                            <div class="movie-item">
+                                <img src="images/alone.png" alt="alone">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/legend.png" alt="legend">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/new-life.png" alt="newlife">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/prince.png" alt="prince">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/tanhaji.png" alt="tanhaji">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/baaghi.png" alt="baaghi">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/black-panthar.png" alt="black-panthar">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/world.png" alt="world">
+                            </div>
+
+                            <div class="movie-item">
+                                <img src="images/wolf.png" alt="wolf">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             <!--End-now-showing-->
+
+
+
+        <!--Start-now-showing-->
+
+               <div class="now-showing plr">
+                <div class="now-showing-features">
+                    <img src="images/popular-movies.png" alt="popularmovies" class="head-img">
+
+
+                    <div class="movies-list">
+                        <div class="movie-item">
+                            <img src="images/kaduva.png" alt="kaduva">
+                        </div>
+                        <div class="movie-item">
+                            <img src="images/alone.png" alt="alone">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/legend.png" alt="legend">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/new-life.png" alt="newlife">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/prince.png" alt="prince">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/tanhaji.png" alt="tanhaji">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/baaghi.png" alt="baaghi">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/black-panthar.png" alt="black-panthar">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/world.png" alt="world">
+                        </div>
+
+                        <div class="movie-item">
+                            <img src="images/wolf.png" alt="wolf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         <!--End-now-showing-->
+
+
+
+         <!--Start-now-showing-->
+
+         <div class="now-showing plr">
+            <div class="now-showing-features">
+                <img src="images/coming-soon.png" alt="coming-soon" class="head-img">
+
+
+                <div class="movies-list">
+                    <div class="movie-item">
+                        <img src="images/kaduva.png" alt="kaduva">
+                    </div>
+                    <div class="movie-item">
+                        <img src="images/alone.png" alt="alone">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/legend.png" alt="legend">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/new-life.png" alt="newlife">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/prince.png" alt="prince">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/tanhaji.png" alt="tanhaji">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/baaghi.png" alt="baaghi">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/black-panthar.png" alt="black-panthar">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/world.png" alt="world">
+                    </div>
+
+                    <div class="movie-item">
+                        <img src="images/wolf.png" alt="wolf">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!--End-now-showing-->
+            
+               
+            </div>
+
+
+            <script src="js/jquery.min.js"></script>
+
+
+        <script>
+            $(window).scroll(function(){
+            if ($(this).scrollTop() > 50) {
+            $('.navbar-info').addClass('active');
+            } else {
+            $('.navbar-info').removeClass('active');
+            }
+        });
+                </script>
+
+       
+    
+</body>
+</html>         

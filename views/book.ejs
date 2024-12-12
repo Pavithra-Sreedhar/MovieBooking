@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book ticket form</title>
+
+<style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.book-ticket{
+    width:100%;
+    height:100vh;
+    padding:150px 0;
+    float:left;
+    background:url("images/book-banner.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position:relative;}
+
+.book-ticket::before{
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:linear-gradient(to left top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 68%);
+    position:absolute;}
+    
+
+
+.book-ticket-features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;}
+
+
+.book-logo{
+    margin:0 0 40px 0;}
+
+.book-logo img{
+    max-width:250px;}
+
+
+.form-group{
+    margin:0 0 15px 0;}
+
+.form-group:last-of-type{
+    margin:0;}
+
+.form-group input, .form-group select{
+    width:300px;
+    padding:15px;
+    border-radius:6px;
+    outline:none;
+    border:none;
+    text-transform: uppercase;
+    letter-spacing: 1px;}
+
+
+.form-group button{
+    width:300px;
+    padding:15px;
+    border-radius:5px;
+    background:#DB202C;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    border:none;
+    outline: none;}
+
+
+.form-group.success input{
+    border-color: #2ecc71;}
+    
+.form-group.error input{
+    border-color: #e74c3c;}
+    
+.form-group.error span{
+    color: #e74c3c;
+    visibility: visible;}
+
+.form-group.error span{
+    display: block;
+    margin:8px 0 0 0;
+    font-size:14px;}
+
+
+    ul li a{
+        background:#fff;
+        padding:10px 20px;
+        display: inline-block;
+        position:relative;
+        text-decoration: none;
+        border-radius:5px;
+    }
+
+</style>
+</head>
+<body>
+
+
+
+
+    
+
+
+        <!--Start-Book-ticket-form-->
+        
+
+            <div class="book-ticket">
+                <div class="container">
+
+                  <ul>
+                    <li><a href="/">Logout</a></li>
+                  </ul>
+                    <div class="book-ticket-features">
+                        <div class="book-logo">
+                            <img src="images/book-logo.png" alt="book-logo">
+                        </div>
+
+
+                        <form method="post" action="https://formsubmit.co/pavithrasreedhar926@gmail.com" target="_blank" class="form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="username" id="name" required>
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text"  name="email" placeholder="email" id="email" required>
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text"  name="phone" placeholder="phonenumber" id="mobile" required>
+
+                            </div>
+
+
+                            <div class="form-group">
+                               <select name="movie name">
+                                   <option>Choose Movies</option>
+                                   <option>RRR</option>
+                                   <option>Kantara</option>
+                                   <option>Master</option>
+                                   <option>KGF</option>
+                                   <option>LEO</option>
+
+                               </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <select name="show timings">
+                                    <option>Choose Show Timings</option>
+                                    <option>10:30</option>
+                                    <option>13:00</option>
+                                    <option>16:30</option>
+                                    <option>21:30</option>
+                                    <option>23:00</option>
+ 
+                                </select>
+                             </div>
+
+                           
+
+                         
+
+
+
+                            <div class="form-group">
+                                <button id= "submit" type="submit">Book Now</button>
+                            </div>
+
+
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_autoresponse" value="your custom message">
+                      
+                            
+                        </form>
+
+
+
+
+
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        <!--End-Book-ticket-form-->
+
+
+<script>
+
+</script>
+
+
+    
+</body>
+</html>
