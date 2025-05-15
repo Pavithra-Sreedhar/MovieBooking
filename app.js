@@ -2,8 +2,8 @@ import express from 'express';
 import connectDB from './db/connectdb.js';
 import web from './routes/web.js';
 const app = express();
-const port = process.env.PORT || '1996'
-const DATABASE_URL = process.env.DATABASE_URL || "mongodb://127.0.0.1:27017";
+const port = process.env.PORT || '8008'
+const DATABASE_URL = process.env.DATABASE_URL || "mongodb+srv://pavithrasreedhar03:v7YqEiRxovJYunI2@cluster0.avth4qt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 //Database Connection
